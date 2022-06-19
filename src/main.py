@@ -6,10 +6,9 @@ def main():
     filename_puzzles = "puzzles.txt"
     filename_booklet = "booklet.tex"
     folder_images = "images"
-    size = 10
 
     # load all the generated puzzles
-    puzzles = load.loadpuzzles(filename_puzzles, size)
+    puzzles = load.loadpuzzles(filename_puzzles)
 
     # convert the puzzles to images
     for index, puzzle in enumerate(puzzles):

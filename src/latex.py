@@ -14,7 +14,7 @@ TEMPLATE_START = \
 \\begin{center}
 	\\fontsize{80}{100}\\selectfont \\textbf{Binairo} \\normalsize\\\\
 	\\vspace{1cm}
-	\\LARGE for Giulia \\normalsize
+	\\LARGE \\normalsize
 \\end{center}
 \\vfill
 \\hspace{0pt}

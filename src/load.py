@@ -16,12 +16,13 @@ def texttogrid(text, size):
     return grid
 
 
-def loadpuzzles(filename, size):
-    """ Load all the lines in the file and return them as puzzle solution pairs. """
+def loadpuzzles(filename):
+    """ Load all the lines in the file and return them as puzzle solution pairs.
+    Expects every line to be as <size puzzle solution>. """
     with open(filename) as fp:
         lines = [line.strip() for line in fp.readlines()]
         lines = filter(lambda s: not str.isspace(s) and s != "", lines)
         lines = map(lambda s: {
-            "puzzle": texttogrid(s.split(' ')[0], size),
-            "solution": texttogrid(s.split(' ')[1], size)}, lines)
+            "puzzle": texttogrid(s.split(' ')[1], int(s.split(' ')[0])),
+            "solution": texttogrid(s.split(' ')[2], int(s.split(' ')[0]))}, lines)
         return list(lines)
